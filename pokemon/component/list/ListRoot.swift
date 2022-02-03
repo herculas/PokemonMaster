@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ListRoot: View {
-    var body: some View {
-        NavigationView {
-            PokemonList().navigationTitle("Pokémons")
-        }
+  var body: some View {
+    NavigationView {
+      PokemonList().navigationTitle("Pokémons")
     }
+  }
 }
 
 struct ListRoot_Previews: PreviewProvider {
-    static var previews: some View {
-        ListRoot()
-    }
+  static var previews: some View {
+    ListRoot()
+  }
 }

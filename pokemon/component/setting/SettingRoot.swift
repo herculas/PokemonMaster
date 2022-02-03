@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct SettingRoot: View {
-    var body: some View {
-        NavigationView {
-            Setting().navigationTitle("设置")
-        }
+  var body: some View {
+    NavigationView {
+      Setting().navigationTitle("设置")
     }
+  }
 }
 
 struct SettingRoot_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingRoot()
-    }
+  static var previews: some View {
+    SettingRoot().environmentObject(Store())
+  }
 }

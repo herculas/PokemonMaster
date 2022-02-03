@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        ListRoot()
-    }
+  var body: some View {
+    MainTab()
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
