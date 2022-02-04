@@ -467,11 +467,11 @@
 		FCDD171A27A6AFD500B1C6EC /* component */ = {
 			isa = PBXGroup;
 			children = (
+				FCFFC0FC27AA4238006FDF65 /* list */,
 				FC53942D27AA7CF100250CCE /* tab */,
+				FCFFC0FD27AA4247006FDF65 /* panel */,
 				FCFFC10527AA4A33006FDF65 /* setting */,
 				FCFFC10227AA47A2006FDF65 /* wrapper */,
-				FCFFC0FC27AA4238006FDF65 /* list */,
-				FCFFC0FD27AA4247006FDF65 /* panel */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -490,8 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				FCADECDE27A9763D00C4D517 /* InfoPanel.swift */,
-				FCFFC0FE27AA425B006FDF65 /* InfoPanelHeader.swift */,
 				FCFFC10027AA43C6006FDF65 /* InfoPanelAbilityList.swift */,
+				FCFFC0FE27AA425B006FDF65 /* InfoPanelHeader.swift */,
 			);
 			path = panel;
 			sourceTree = "<group>";
