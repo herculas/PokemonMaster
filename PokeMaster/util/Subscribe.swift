@@ -9,16 +9,16 @@ import Foundation
 import Combine
 
 class SubscriptionToken {
-    
-    var cancellable: AnyCancellable?
-    
-    func unseal() {
-        self.cancellable = nil
-    }
+  
+  var cancellable: AnyCancellable?
+  
+  func unseal() {
+    self.cancellable = nil
+  }
 }
 
 extension AnyCancellable {
-    func seal(in token: SubscriptionToken) {
-        token.cancellable = self
-    }
+  func seal(in token: SubscriptionToken) {
+    token.cancellable = self
+  }
 }

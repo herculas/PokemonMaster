@@ -100,7 +100,6 @@
 		FCF2A52A27C7A2410090E0FE /* InfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A51B27C7A2410090E0FE /* InfoPanel.swift */; };
 		FCF2A52B27C7A2410090E0FE /* BlurBlender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A51D27C7A2410090E0FE /* BlurBlender.swift */; };
 		FCF2A52C27C7A2410090E0FE /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A51F27C7A2410090E0FE /* MainTab.swift */; };
-		FCF2A52D27C7A2410090E0FE /* PokemonInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A52027C7A2410090E0FE /* PokemonInfoRowView.swift */; };
 		FCF2A52E27C7A2410090E0FE /* ListRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A52227C7A2410090E0FE /* ListRoot.swift */; };
 		FCF2A52F27C7A2410090E0FE /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A52327C7A2410090E0FE /* InfoRow.swift */; };
 		FCF2A53027C7A2410090E0FE /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF2A52427C7A2410090E0FE /* PokemonList.swift */; };
@@ -223,7 +222,6 @@
 		FCF2A51B27C7A2410090E0FE /* InfoPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPanel.swift; sourceTree = "<group>"; };
 		FCF2A51D27C7A2410090E0FE /* BlurBlender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurBlender.swift; sourceTree = "<group>"; };
 		FCF2A51F27C7A2410090E0FE /* MainTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
-		FCF2A52027C7A2410090E0FE /* PokemonInfoRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonInfoRowView.swift; sourceTree = "<group>"; };
 		FCF2A52227C7A2410090E0FE /* ListRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRoot.swift; sourceTree = "<group>"; };
 		FCF2A52327C7A2410090E0FE /* InfoRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
 		FCF2A52427C7A2410090E0FE /* PokemonList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
@@ -406,36 +404,36 @@
 		FCF2A49827C7A1B70090E0FE /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				FCF2A49927C7A1B70090E0FE /* pokemon-7.json */,
-				FCF2A49A27C7A1B70090E0FE /* pokemon-14.json */,
-				FCF2A49B27C7A1B70090E0FE /* pokemon-22.json */,
-				FCF2A49C27C7A1B70090E0FE /* pokemon-18.json */,
-				FCF2A49D27C7A1B70090E0FE /* pokemon-19.json */,
-				FCF2A49E27C7A1B70090E0FE /* pokemon-23.json */,
-				FCF2A49F27C7A1B70090E0FE /* pokemon-15.json */,
-				FCF2A4A027C7A1B70090E0FE /* pokemon-6.json */,
-				FCF2A4A127C7A1B70090E0FE /* pokemon-24.json */,
-				FCF2A4A227C7A1B70090E0FE /* pokemon-28.json */,
 				FCF2A4A327C7A1B70090E0FE /* pokemon-1.json */,
+				FCF2A4AC27C7A1B70090E0FE /* pokemon-2.json */,
+				FCF2A4AB27C7A1B70090E0FE /* pokemon-3.json */,
+				FCF2A4B527C7A1B70090E0FE /* pokemon-4.json */,
+				FCF2A4B027C7A1B70090E0FE /* pokemon-5.json */,
+				FCF2A4A027C7A1B70090E0FE /* pokemon-6.json */,
+				FCF2A49927C7A1B70090E0FE /* pokemon-7.json */,
+				FCF2A4B427C7A1B70090E0FE /* pokemon-8.json */,
+				FCF2A4B127C7A1B70090E0FE /* pokemon-9.json */,
+				FCF2A4AA27C7A1B70090E0FE /* pokemon-10.json */,
+				FCF2A4AD27C7A1B70090E0FE /* pokemon-11.json */,
 				FCF2A4A427C7A1B70090E0FE /* pokemon-12.json */,
 				FCF2A4A527C7A1B70090E0FE /* pokemon-13.json */,
-				FCF2A4A627C7A1B70090E0FE /* pokemon-29.json */,
-				FCF2A4A727C7A1B70090E0FE /* pokemon-25.json */,
-				FCF2A4A827C7A1B70090E0FE /* pokemon-26.json */,
-				FCF2A4A927C7A1B70090E0FE /* pokemon-30.json */,
-				FCF2A4AA27C7A1B70090E0FE /* pokemon-10.json */,
-				FCF2A4AB27C7A1B70090E0FE /* pokemon-3.json */,
-				FCF2A4AC27C7A1B70090E0FE /* pokemon-2.json */,
-				FCF2A4AD27C7A1B70090E0FE /* pokemon-11.json */,
-				FCF2A4AE27C7A1B70090E0FE /* pokemon-27.json */,
+				FCF2A49A27C7A1B70090E0FE /* pokemon-14.json */,
+				FCF2A49F27C7A1B70090E0FE /* pokemon-15.json */,
 				FCF2A4AF27C7A1B70090E0FE /* pokemon-16.json */,
-				FCF2A4B027C7A1B70090E0FE /* pokemon-5.json */,
-				FCF2A4B127C7A1B70090E0FE /* pokemon-9.json */,
+				FCF2A4B627C7A1B70090E0FE /* pokemon-17.json */,
+				FCF2A49C27C7A1B70090E0FE /* pokemon-18.json */,
+				FCF2A49D27C7A1B70090E0FE /* pokemon-19.json */,
 				FCF2A4B227C7A1B70090E0FE /* pokemon-20.json */,
 				FCF2A4B327C7A1B70090E0FE /* pokemon-21.json */,
-				FCF2A4B427C7A1B70090E0FE /* pokemon-8.json */,
-				FCF2A4B527C7A1B70090E0FE /* pokemon-4.json */,
-				FCF2A4B627C7A1B70090E0FE /* pokemon-17.json */,
+				FCF2A49B27C7A1B70090E0FE /* pokemon-22.json */,
+				FCF2A49E27C7A1B70090E0FE /* pokemon-23.json */,
+				FCF2A4A127C7A1B70090E0FE /* pokemon-24.json */,
+				FCF2A4A727C7A1B70090E0FE /* pokemon-25.json */,
+				FCF2A4A827C7A1B70090E0FE /* pokemon-26.json */,
+				FCF2A4AE27C7A1B70090E0FE /* pokemon-27.json */,
+				FCF2A4A227C7A1B70090E0FE /* pokemon-28.json */,
+				FCF2A4A627C7A1B70090E0FE /* pokemon-29.json */,
+				FCF2A4A927C7A1B70090E0FE /* pokemon-30.json */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -443,36 +441,36 @@
 		FCF2A4B727C7A1B70090E0FE /* species */ = {
 			isa = PBXGroup;
 			children = (
-				FCF2A4B827C7A1B70090E0FE /* pokemon-species-11.json */,
-				FCF2A4B927C7A1B70090E0FE /* pokemon-species-7.json */,
-				FCF2A4BA27C7A1B70090E0FE /* pokemon-species-27.json */,
-				FCF2A4BB27C7A1B70090E0FE /* pokemon-species-30.json */,
-				FCF2A4BC27C7A1B70090E0FE /* pokemon-species-26.json */,
-				FCF2A4BD27C7A1B70090E0FE /* pokemon-species-6.json */,
-				FCF2A4BE27C7A1B70090E0FE /* pokemon-species-10.json */,
-				FCF2A4BF27C7A1B70090E0FE /* pokemon-species-21.json */,
-				FCF2A4C027C7A1B70090E0FE /* pokemon-species-17.json */,
 				FCF2A4C127C7A1B70090E0FE /* pokemon-species-1.json */,
-				FCF2A4C227C7A1B70090E0FE /* pokemon-species-16.json */,
-				FCF2A4C327C7A1B70090E0FE /* pokemon-species-20.json */,
-				FCF2A4C427C7A1B70090E0FE /* pokemon-species-23.json */,
-				FCF2A4C527C7A1B70090E0FE /* pokemon-species-19.json */,
-				FCF2A4C627C7A1B70090E0FE /* pokemon-species-3.json */,
-				FCF2A4C727C7A1B70090E0FE /* pokemon-species-15.json */,
-				FCF2A4C827C7A1B70090E0FE /* pokemon-species-14.json */,
 				FCF2A4C927C7A1B70090E0FE /* pokemon-species-2.json */,
-				FCF2A4CA27C7A1B70090E0FE /* pokemon-species-18.json */,
-				FCF2A4CB27C7A1B70090E0FE /* pokemon-species-22.json */,
-				FCF2A4CC27C7A1B70090E0FE /* pokemon-species-5.json */,
-				FCF2A4CD27C7A1B70090E0FE /* pokemon-species-29.json */,
-				FCF2A4CE27C7A1B70090E0FE /* pokemon-species-13.json */,
-				FCF2A4CF27C7A1B70090E0FE /* pokemon-species-9.json */,
-				FCF2A4D027C7A1B70090E0FE /* pokemon-species-25.json */,
-				FCF2A4D127C7A1B70090E0FE /* pokemon-species-24.json */,
-				FCF2A4D227C7A1B70090E0FE /* pokemon-species-8.json */,
-				FCF2A4D327C7A1B70090E0FE /* pokemon-species-12.json */,
-				FCF2A4D427C7A1B70090E0FE /* pokemon-species-28.json */,
+				FCF2A4C627C7A1B70090E0FE /* pokemon-species-3.json */,
 				FCF2A4D527C7A1B70090E0FE /* pokemon-species-4.json */,
+				FCF2A4CC27C7A1B70090E0FE /* pokemon-species-5.json */,
+				FCF2A4BD27C7A1B70090E0FE /* pokemon-species-6.json */,
+				FCF2A4B927C7A1B70090E0FE /* pokemon-species-7.json */,
+				FCF2A4D227C7A1B70090E0FE /* pokemon-species-8.json */,
+				FCF2A4CF27C7A1B70090E0FE /* pokemon-species-9.json */,
+				FCF2A4BE27C7A1B70090E0FE /* pokemon-species-10.json */,
+				FCF2A4B827C7A1B70090E0FE /* pokemon-species-11.json */,
+				FCF2A4D327C7A1B70090E0FE /* pokemon-species-12.json */,
+				FCF2A4CE27C7A1B70090E0FE /* pokemon-species-13.json */,
+				FCF2A4C827C7A1B70090E0FE /* pokemon-species-14.json */,
+				FCF2A4C727C7A1B70090E0FE /* pokemon-species-15.json */,
+				FCF2A4C227C7A1B70090E0FE /* pokemon-species-16.json */,
+				FCF2A4C027C7A1B70090E0FE /* pokemon-species-17.json */,
+				FCF2A4CA27C7A1B70090E0FE /* pokemon-species-18.json */,
+				FCF2A4C527C7A1B70090E0FE /* pokemon-species-19.json */,
+				FCF2A4C327C7A1B70090E0FE /* pokemon-species-20.json */,
+				FCF2A4BF27C7A1B70090E0FE /* pokemon-species-21.json */,
+				FCF2A4CB27C7A1B70090E0FE /* pokemon-species-22.json */,
+				FCF2A4C427C7A1B70090E0FE /* pokemon-species-23.json */,
+				FCF2A4D127C7A1B70090E0FE /* pokemon-species-24.json */,
+				FCF2A4D027C7A1B70090E0FE /* pokemon-species-25.json */,
+				FCF2A4BC27C7A1B70090E0FE /* pokemon-species-26.json */,
+				FCF2A4BA27C7A1B70090E0FE /* pokemon-species-27.json */,
+				FCF2A4D427C7A1B70090E0FE /* pokemon-species-28.json */,
+				FCF2A4CD27C7A1B70090E0FE /* pokemon-species-29.json */,
+				FCF2A4BB27C7A1B70090E0FE /* pokemon-species-30.json */,
 			);
 			path = species;
 			sourceTree = "<group>";
@@ -489,12 +487,11 @@
 		FCF2A51727C7A2410090E0FE /* component */ = {
 			isa = PBXGroup;
 			children = (
-				FCF2A51827C7A2410090E0FE /* panel */,
-				FCF2A51C27C7A2410090E0FE /* wrapper */,
-				FCF2A51E27C7A2410090E0FE /* tab */,
-				FCF2A52027C7A2410090E0FE /* PokemonInfoRowView.swift */,
 				FCF2A52127C7A2410090E0FE /* list */,
+				FCF2A51827C7A2410090E0FE /* panel */,
 				FCF2A52527C7A2410090E0FE /* setting */,
+				FCF2A51E27C7A2410090E0FE /* tab */,
+				FCF2A51C27C7A2410090E0FE /* wrapper */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -736,7 +733,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF2A52D27C7A2410090E0FE /* PokemonInfoRowView.swift in Sources */,
 				FC07008527C502F60077F7FE /* Language.swift in Sources */,
 				FC9E5B6227C679B5000AEB9F /* AbilityRequest.swift in Sources */,
 				FC07005A27C500B80077F7FE /* ContentView.swift in Sources */,

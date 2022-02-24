@@ -8,18 +8,18 @@
 import Foundation
 
 struct Ability: Codable {
-    let id: Int
-    let names: [Ability.Name]
-    let flavorTextEntries: [Ability.FlavorTextEntry]
-    
-    struct Name: Codable, LanguageTextEntry {
-        let language: Language
-        let name: String
-        var text: String { self.name }
-    }
-    struct FlavorTextEntry: Codable, LanguageTextEntry {
-        let language: Language
-        let flavor: String
-        var text: String { self.flavor }
-    }
+  let id: Int
+  let names: [Ability.Name]
+  let flavorTextEntries: [Ability.FlavorTextEntry]
+  
+  struct Name: Codable, LanguageTextEntry {
+    let language: Language
+    let name: String
+    var text: String { self.name }
+  }
+  struct FlavorTextEntry: Codable, LanguageTextEntry {
+    let language: Language
+    let flavor: String
+    var text: String { self.flavor }
+  }
 }
