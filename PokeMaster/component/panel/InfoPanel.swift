@@ -21,7 +21,7 @@ struct PokemonInfoPanel: View {
   }
   
   var pokemonDescription: some View {
-      Text(model.descriptionTextChinese)
+      Text(model.descriptionTextSimplifiedChinese)
       .font(.callout)
       .foregroundColor(Color(hex: 0x666666))
       .fixedSize(horizontal: false, vertical: true)

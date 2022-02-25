@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AbilityViewModel: Codable, Identifiable {
   
+  var id: Int { self.ability.id }
+  
   let ability: Ability
   
   init(ability: Ability) {
     self.ability = ability
   }
   
-  var id: Int { self.ability.id }
   var nameSimplifiedChinese: String { self.ability.names.simplifiedChinese }
   var nameEnglish: String { self.ability.names.english }
   var descriptionSimplifiedChinese: String { self.ability.flavorTextEntries.simplifiedChinese.newlineRemoved }

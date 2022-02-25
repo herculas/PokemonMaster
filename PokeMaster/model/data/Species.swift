@@ -8,37 +8,33 @@
 import SwiftUI
 
 struct Species: Codable {
-  
-  let color: Species.Color
-  let names: [Species.Name]
-  let genera: [Species.Genus]
-  let flavorTextEntries: [Species.FlavorTextEntry]
-  
-  struct Color: Codable {
-    let name: Name
-    enum Name: String, Codable {
-      case black, blue, brown, gray, green, pink, purple, red, white, yellow
-      var color: SwiftUI.Color {
-        return SwiftUI.Color("pokemon-\(self.rawValue)")
-      }
+  let color: SpeciesColor
+  let names: [Name]
+  let genera: [SpeciesGenus]
+  let flavorTextEntries: [FlavorTextEntry]
+}
+
+struct SpeciesColor: Codable {
+  let name: ColorNameEnum
+  enum ColorNameEnum: String, Codable {
+    case black
+    case blue
+    case brown
+    case gray
+    case green
+    case pink
+    case purple
+    case red
+    case white
+    case yellow
+    var color: SwiftUI.Color {
+      return SwiftUI.Color("pokemon-\(self.rawValue)")
     }
   }
-  
-  struct Name: Codable, LanguageTextEntry {
-    let language: Language
-    let name: String
-    var text: String { self.name }
-  }
-  
-  struct FlavorTextEntry: Codable, LanguageTextEntry {
-    let language: Language
-    let flavorText: String
-    var text: String { self.flavorText }
-  }
-  
-  struct Genus: Codable, LanguageTextEntry {
-    let language: Language
-    let genus: String
-    var text: String { self.genus }
-  }
+}
+
+struct SpeciesGenus: Codable, LanguageTextEntry {
+  let language: Language
+  let genus: String
+  var text: String { self.genus }
 }

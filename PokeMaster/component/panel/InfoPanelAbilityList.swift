@@ -33,7 +33,6 @@ extension PokemonInfoPanel {
       }
       .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
   }
 }
 

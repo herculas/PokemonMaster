@@ -27,6 +27,11 @@ class PokeMasterTests: XCTestCase {
     // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
   }
   
+  func testImportData() throws {
+    let abilityModels = AbilityViewModel.sample(pokemonId: 1)
+    print(abilityModels)
+  }
+  
   func testPerformanceExample() throws {
     // This is an example of a performance test case.
     self.measure {

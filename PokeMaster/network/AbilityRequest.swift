@@ -10,7 +10,7 @@ import Combine
 
 struct AbilityRequest {
   
-  let ability: Pokemon.AbilityEntry
+  let ability: PokemonAbilityEntry
   
   var publisher: AnyPublisher<AbilityViewModel, PokeError> {
     URLSession

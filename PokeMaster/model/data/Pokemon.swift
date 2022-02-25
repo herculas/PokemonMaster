@@ -8,58 +8,46 @@
 import Foundation
 import SwiftUI
 
-struct Pokemon: Codable {
-  
+struct Pokemon: Codable, Identifiable {
   let id: Int
-  let types: [Pokemon.`Type`]
-  let abilities: [Pokemon.AbilityEntry]
-  let stats: [Pokemon.Stat]
-  let species: Pokemon.SpeciesEntry
+  let types: [PokemonType]
+  let abilities: [PokemonAbilityEntry]
+  let stats: [PokemonStat]
+  let species: PokemonSpeciesEntry
   let height: Int
   let weight: Int
-  
-  struct `Type`: Codable {
-    let slot: Int
-    let type: Pokemon.`Type`.Internal
-    struct Internal: Codable {
-      let name: String
-      let url: URL
-    }
-  }
-  
-  struct Stat: Codable {
-    let baseStat: Int
-    let stat: Pokemon.Stat.Internal
-    struct Internal: Codable {
-      let name: Pokemon.Stat.Case
-    }
-    enum Case: String, Codable {
-      case speed
-      case specialDefense = "special-defense"
-      case specialAttack = "special-attack"
-      case defense
-      case attack
-      case hp
-    }
-  }
-  
-  struct SpeciesEntry: Codable {
+}
+
+struct PokemonAbilityEntry: Codable, Identifiable {
+  var id: URL { self.ability.url }
+  let slot: Int
+  let ability: PokemonAbilityEntry.Internal
+  struct Internal: Codable {
     let name: String
     let url: URL
   }
-  
-  struct AbilityEntry: Codable, Identifiable {
-    let slot: Int
-    let ability: Pokemon.AbilityEntry.Internal
-    var id: URL { self.ability.url }
-    struct Internal: Codable {
-      let name: String
-      let url: URL
-    }
+}
+
+struct PokemonStat: Codable {
+  let baseStat: Int
+  let stat: PokemonStat.Internal
+  struct Internal: Codable {
+    let name: PokemonStat.StatEnum
+  }
+  enum StatEnum: String, Codable {
+    case speed
+    case specialDefense = "special-defense"
+    case specialAttack = "special-attack"
+    case defense
+    case attack
+    case hp
   }
 }
 
-extension Pokemon: Identifiable {}
+struct PokemonSpeciesEntry: Codable {
+  let name: String
+  let url: URL
+}
 
 extension Pokemon: CustomDebugStringConvertible {
   var debugDescription: String {
