@@ -32,6 +32,14 @@ class PokeMasterTests: XCTestCase {
     print(abilityModels)
   }
   
+  func testDataModels() throws {
+    let ability = Ability.sample(id: 34)
+    let species = Species.sample(id: 1)
+    
+    print(ability.name)
+    print(species.name)
+  }
+  
   func testPerformanceExample() throws {
     // This is an example of a performance test case.
     self.measure {
