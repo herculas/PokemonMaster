@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Version: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let names: [Name]
+  let versionGroup: NamedAPIResource        // VersionGroup
+}

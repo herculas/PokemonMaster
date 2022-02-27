@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct EncounterConditionValue: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let condition: NamedAPIResource           // EncounterCondition
+  let names: [Name]
+}

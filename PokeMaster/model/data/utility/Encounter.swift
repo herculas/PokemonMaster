@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Encounter: Codable {
+  let minLevel: Int
+  let maxLevel: Int
+  let conditionValues: [NamedAPIResource]   // [EncounterConditionValue]
+  let chance: Int
+  let method: NamedAPIResource              // EncounterMethod
+}

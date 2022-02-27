@@ -7,21 +7,31 @@
 
 import Foundation
 
-/// Abilities provide _passive_ effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have _only one_ ability at a time.
-struct Ability: Codable {
-  
-  /// The identifier for this ability
+struct Ability: Codable, Identifiable {
   let id: Int
-  
-  /// The name for this ability
   let name: String
-  
-  /// Whether or not this ability originated in the main series of Pokémon
   let isMainSeries: Bool
-  
-  /// The names of this ability listed in different languages
+  let generation: NamedAPIResource          // Generation
   let names: [Name]
-  
-  /// The falvor text of this ability listed in different languages
-  let flavorTextEntries: [FlavorTextEntry]
+  let effectEntries: [VerboseEffect]
+  let effectChanges: [AbilityEffectChange]
+  let flavorTextEntries: [AbilityFlavorText]
+  let pokemon: [AbilityPokemon]
+}
+
+struct AbilityEffectChange: Codable {
+  let effectEntries: [Effect]
+  let versionGroup: NamedAPIResource        // VersionGroup
+}
+
+struct AbilityFlavorText: Codable {
+  let flavorText: String
+  let language: NamedAPIResource            // Language
+  let versionGroup: NamedAPIResource        // VersionGroup
+}
+
+struct AbilityPokemon: Codable {
+  let isHidden: Bool
+  let slot: Int
+  let pokemon: NamedAPIResource             // Pokemon
 }

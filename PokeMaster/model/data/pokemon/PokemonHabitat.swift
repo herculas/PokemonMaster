@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct PokemonHabitat: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let names: [Name]
+  let pokemonSpecies: [NamedAPIResource]    // [PokemonSpecies]
+}

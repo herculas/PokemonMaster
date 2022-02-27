@@ -7,4 +7,7 @@
 
 import Foundation
 
-// TODO: LocationAreaEncounter
+struct LocationAreaEncounter: Codable {
+  let locationArea: NamedAPIResource        // LocationArea
+  let versionDetails: [VersionEncounterDetail]
+}

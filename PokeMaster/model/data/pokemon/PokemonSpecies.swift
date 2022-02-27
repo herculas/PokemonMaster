@@ -7,4 +7,78 @@
 
 import Foundation
 
-// TODO: PokemonSpecies, Genus, PokemonSpeciesDexEntry, PalParkEncounterArea and PokemonSpeciesVariety
+//struct Species: Codable {
+//  let id: Int
+//  let name: String
+//  let order: Int
+//  let genderRate: Int
+//  let captureRate: Int
+//  let baseHappiness: Int
+//  let isBaby: Bool
+//  let isLegendary: Bool
+//  let isMythical: Bool
+//  let hatchCounter: Int
+//  let hasGenderDifferences: Bool
+//  let formsSwitchable: Bool
+//  let color: SpeciesColor
+//  let names: [Name]
+//  let genera: [SpeciesGenus]
+//  let flavorTextEntries: [FlavorTextEntry]
+//}
+
+struct PokemonSpecies: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let order: Int
+  let genderRate: Int
+  let captureRate: Int
+  let baseHappiness: Int
+  let isBaby: Bool
+  let isLegendary: Bool
+  let isMythical: Bool
+  let hatchCounter: Int
+  let hasGenderDifferences: Bool
+  let formsSwitchable: Bool
+  let growthRate: NamedAPIResource          // GrowthRate
+  let pokedexNumbers: [PokemonSpeciesDexEntry]
+  let eggGroups: [EggGroup]
+  let color: NamedAPIResource               // PokemonColor
+  let shape: NamedAPIResource               // PokemonShape
+  let evolvesFromSpecies: NamedAPIResource  // PokemonSpecies
+  let evolutionChain: APIResource           // EvolutionChain
+  let habitat: NamedAPIResource             // PokemonHabitat
+  let generation: NamedAPIResource          // Generation
+  let names: [Name]
+  let palParkEncounters: [PalParkEncounterArea]
+  let flavorTextEntries: [FlavorText]
+  let formDescriptions: [Description]
+  let genera: [Genus]
+  let varieties: [PokemonSpeciesVariety]
+}
+
+//struct SpeciesGenus: Codable, LanguageTextEntry {
+//  let language: Language
+//  let genus: String
+//  var text: String { self.genus }
+//}
+
+struct Genus: Codable {
+  let genus: String
+  let language: NamedAPIResource            // Language
+}
+
+struct PokemonSpeciesDexEntry: Codable {
+  let entryNumber: Int
+  let pokedex: NamedAPIResource             // Pokedex
+}
+
+struct PalParkEncounterArea: Codable {
+  let baseScore: Int
+  let rate: Int
+  let area: NamedAPIResource                // PalParkArea
+}
+
+struct PokemonSpeciesVariety: Codable {
+  let isDefault: Bool
+  let pokemon: NamedAPIResource             // Pokemon
+}

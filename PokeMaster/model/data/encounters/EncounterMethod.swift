@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct EncounterMethod: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let order: Int
+  let names: [Name]
+}

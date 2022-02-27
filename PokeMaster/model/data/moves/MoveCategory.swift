@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct MoveCategory: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let moves: [NamedAPIResource]             // [Move]
+  let descriptions: [Description]
+}

@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct VersionGroup: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let order: Int
+  let generation: NamedAPIResource          // Generation
+  let moveLearnMethods: [NamedAPIResource]  // [MoveLearnMethod]
+  let pokedexes: [NamedAPIResource]         // [Pokedex]
+  let regions: [NamedAPIResource]           // [Region]
+  let versions: [NamedAPIResource]          // [Version]
+}

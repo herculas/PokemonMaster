@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct GenerationGameIndex: Codable {
+  let gameIndex: Int
+  let generation: NamedAPIResource          // Generation
+}

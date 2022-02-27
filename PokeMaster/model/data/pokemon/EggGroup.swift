@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct EggGroup: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let names: [Name]
+  let pokemonSpecies: [NamedAPIResource]    // [PokemonSpecies]
+}

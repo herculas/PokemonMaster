@@ -7,4 +7,15 @@
 
 import Foundation
 
-// TODO: PalParkArea and PalParkEncounterSpecies
+struct PalParkArea: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let names: [Name]
+  let pokemonEncounters: [PalParkEncounterSpecies]
+}
+
+struct PalParkEncounterSpecies: Codable {
+  let baseScore: Int
+  let rate: Int
+  let pokemonSpecies: NamedAPIResource      // PokemonSpecies
+}

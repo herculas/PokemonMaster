@@ -7,4 +7,9 @@
 
 import Foundation
 
-// TODO: BerryFirmness
+struct BerryFirmness: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let berries: [NamedAPIResource]           // [Berry]
+  let names: [Name]
+}

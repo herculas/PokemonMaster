@@ -44,3 +44,12 @@ extension Array where Element: Publisher {
     }
   }
 }
+
+extension Array where Element: LanguageTextEntry {
+  var simplifiedChinese: String {
+    self.first { $0.language.isSimplifiedChinese }?.text ?? english
+  }
+  var english: String {
+    self.first { $0.language.isEnglish }?.text ?? "Unknown"
+  }
+}

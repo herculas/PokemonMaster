@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct MoveDamageClass: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let descriptions: [Description]
+  let moves: [NamedAPIResource]             // [Move]
+  let names: [Name]
+}

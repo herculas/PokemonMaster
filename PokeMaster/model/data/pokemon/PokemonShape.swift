@@ -7,4 +7,15 @@
 
 import Foundation
 
-// TODO: PokemonShape and AwesomeName
+struct PokemonShape: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let awesomeNames: [AwesomeName]
+  let names: [Name]
+  let pokemonSpecies: [NamedAPIResource]    // [PokemonSpecies]
+}
+
+struct AwesomeName: Codable {
+  let awesomeName: String
+  let language: NamedAPIResource            // Language
+}

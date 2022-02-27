@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct ItemAttribute: Codable, Identifiable {
+  let id: Int
+  let name: String
+  let items: [NamedAPIResource]             // [Item]
+  let names: [Name]
+  let descriptions: [Description]
+}
