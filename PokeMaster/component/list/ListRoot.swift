@@ -1,22 +1,22 @@
+////
+////  ListRoot.swift
+////  pokemon
+////
+////  Created by 宋睿 on 2/2/2022.
+////
 //
-//  ListRoot.swift
-//  pokemon
+//import SwiftUI
 //
-//  Created by 宋睿 on 2/2/2022.
+//struct ListRoot: View {
+//  var body: some View {
+//    NavigationView {
+//      PokemonList().navigationTitle("Pokémons")
+//    }
+//  }
+//}
 //
-
-import SwiftUI
-
-struct ListRoot: View {
-  var body: some View {
-    NavigationView {
-      PokemonList().navigationTitle("Pokémons")
-    }
-  }
-}
-
-struct ListRoot_Previews: PreviewProvider {
-  static var previews: some View {
-    ListRoot()
-  }
-}
+//struct ListRoot_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ListRoot()
+//  }
+//}

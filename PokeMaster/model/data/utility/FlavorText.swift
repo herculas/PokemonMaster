@@ -10,5 +10,5 @@ import Foundation
 struct FlavorText: Codable {
   let flavorText: String
   let language: NamedAPIResource            // Language
-  let version: NamedAPIResource             // Version
+  let version: NamedAPIResource?             // Version
 }

@@ -27,7 +27,6 @@ struct FileLoader {
     }
     return try! loadJSON(from: url)
   }
-  
 }
 
 struct FileWriter {

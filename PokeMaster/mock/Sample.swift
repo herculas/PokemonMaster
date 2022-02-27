@@ -13,12 +13,12 @@ extension Pokemon {
   }
 }
 
-extension Species {
-  static func sample(url: URL) -> Species {
+extension PokemonSpecies {
+  static func sample(url: URL) -> PokemonSpecies {
     return FileLoader.loadBundledJSON(file: "species-\(url.extractedId!)")
   }
   
-  static func sample(id: Int) -> Species {
+  static func sample(id: Int) -> PokemonSpecies {
     return FileLoader.loadBundledJSON(file: "species-\(id)")
   }
 }
@@ -32,32 +32,32 @@ extension Ability {
   }
 }
 
-extension PokemonViewModel {
-  static func sample(id: Int) -> PokemonViewModel {
-    let pokemon = Pokemon.sample(id: id)
-    let species = Species.sample(url: pokemon.species.url)
-    return PokemonViewModel(pokemon: pokemon, species: species)
-  }
-  
-  static var all: [PokemonViewModel] = {
-    (1...30).map { id in
-      let pokemon = Pokemon.sample(id: id)
-      let species = Species.sample(url: pokemon.species.url)
-      return PokemonViewModel(pokemon: pokemon, species: species)
-    }
-  }()
-  
-  static let samples: [PokemonViewModel] = [
-    PokemonViewModel.sample(id: 1),
-    PokemonViewModel.sample(id: 2),
-    PokemonViewModel.sample(id: 3)
-  ]
-}
-
-extension AbilityViewModel {
-  static func sample(pokemonId: Int) -> [AbilityViewModel] {
-    Pokemon.sample(id: pokemonId).abilities.map {
-      AbilityViewModel(ability: Ability.sample(url: $0.ability.url))
-    }
-  }
-}
+//extension PokemonViewModel {
+//  static func sample(id: Int) -> PokemonViewModel {
+//    let pokemon = Pokemon.sample(id: id)
+//    let species = PokemonSpecies.sample(url: pokemon.species.url)
+//    return PokemonViewModel(pokemon: pokemon, species: species)
+//  }
+//
+//  static var all: [PokemonViewModel] = {
+//    (1...30).map { id in
+//      let pokemon = Pokemon.sample(id: id)
+//      let species = PokemonSpecies.sample(url: pokemon.species.url)
+//      return PokemonViewModel(pokemon: pokemon, species: species)
+//    }
+//  }()
+//
+//  static let samples: [PokemonViewModel] = [
+//    PokemonViewModel.sample(id: 1),
+//    PokemonViewModel.sample(id: 2),
+//    PokemonViewModel.sample(id: 3)
+//  ]
+//}
+//
+//extension AbilityViewModel {
+//  static func sample(pokemonId: Int) -> [AbilityViewModel] {
+//    Pokemon.sample(id: pokemonId).abilities.map {
+//      AbilityViewModel(ability: Ability.sample(url: $0.ability.url))
+//    }
+//  }
+//}
