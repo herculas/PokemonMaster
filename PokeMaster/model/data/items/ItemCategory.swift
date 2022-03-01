@@ -8,9 +8,9 @@
 import Foundation
 
 struct ItemCategory: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let items: [NamedAPIResource]             // [Item]
-  let names: [Name]
-  let pocket: [NamedAPIResource]            // [ItemPocket]
+  let id: Int?
+  let name: String?
+  let items: [NamedAPIResource]?                      // [Item]
+  let names: [Name]?
+  let pocket: [NamedAPIResource]?                     // [ItemPocket]
 }

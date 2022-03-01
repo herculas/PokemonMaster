@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 class SubscriptionToken {
-  
   var cancellable: AnyCancellable?
-  
   func unseal() {
     self.cancellable = nil
   }

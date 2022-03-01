@@ -8,8 +8,8 @@
 import Foundation
 
 struct ItemFlingEffect: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let effectEntries: [Effect]
-  let items: [NamedAPIResource]             // [Item]
+  let id: Int?
+  let name: String?
+  let effectEntries: [Effect]?
+  let items: [NamedAPIResource]?                      // [Item]
 }

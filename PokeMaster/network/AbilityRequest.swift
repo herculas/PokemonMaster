@@ -1,13 +1,13 @@
-////
-////  AbilitiesRequest.swift
-////  PokeMaster
-////
-////  Created by 宋睿 on 23/2/2022.
-////
 //
+//  AbilitiesRequest.swift
+//  PokeMaster
+//
+//  Created by 宋睿 on 23/2/2022.
+//
+
 //import Foundation
 //import Combine
-//
+
 //struct AbilityRequest {
 //  
 //  let ability: PokemonAbilityEntry

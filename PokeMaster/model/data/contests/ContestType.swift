@@ -8,14 +8,14 @@
 import Foundation
 
 struct ContestType: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let berryFlavor: NamedAPIResource         // BerryFlavor
-  let names: [ContestName]
+  let id: Int?
+  let name: String?
+  let berryFlavor: NamedAPIResource?                  // BerryFlavor
+  let names: [ContestName]?
 }
 
 struct ContestName: Codable {
-  let name: String
-  let color: String
-  let language: NamedAPIResource            // Language
+  let name: String?
+  let color: String?
+  let language: NamedAPIResource?                     // Language
 }

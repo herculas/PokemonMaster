@@ -8,8 +8,8 @@
 import Foundation
 
 struct ItemPocket: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let categories: [NamedAPIResource]        // [ItemCategory]
-  let names: [Name]
+  let id: Int?
+  let name: String?
+  let categories: [NamedAPIResource]?                 // [ItemCategory]
+  let names: [Name]?
 }

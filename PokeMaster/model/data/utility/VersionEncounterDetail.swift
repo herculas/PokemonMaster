@@ -8,7 +8,7 @@
 import Foundation
 
 struct VersionEncounterDetail: Codable {
-  let version: NamedAPIResource             // Version
-  let maxChance: Int
-  let encounterDetails: [Encounter]
+  let version: NamedAPIResource?                      // Version
+  let maxChance: Int?
+  let encounterDetails: [Encounter]?
 }

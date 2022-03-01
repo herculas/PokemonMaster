@@ -8,9 +8,9 @@
 import Foundation
 
 struct MoveTarget: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let descriptions: [Description]
-  let moves: [NamedAPIResource]             // [Move]
-  let names: [Name]
+  let id: Int?
+  let name: String?
+  let descriptions: [Description]?
+  let moves: [NamedAPIResource]?                      // [Move]
+  let names: [Name]?
 }

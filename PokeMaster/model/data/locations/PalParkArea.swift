@@ -8,14 +8,14 @@
 import Foundation
 
 struct PalParkArea: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let names: [Name]
-  let pokemonEncounters: [PalParkEncounterSpecies]
+  let id: Int?
+  let name: String?
+  let names: [Name]?
+  let pokemonEncounters: [PalParkEncounterSpecies]?
 }
 
 struct PalParkEncounterSpecies: Codable {
-  let baseScore: Int
-  let rate: Int
-  let pokemonSpecies: NamedAPIResource      // PokemonSpecies
+  let baseScore: Int?
+  let rate: Int?
+  let pokemonSpecies: NamedAPIResource?               // PokemonSpecies
 }

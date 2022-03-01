@@ -8,30 +8,30 @@
 import Foundation
 
 struct Ability: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let isMainSeries: Bool
-  let generation: NamedAPIResource          // Generation
-  let names: [Name]
-  let effectEntries: [VerboseEffect]
-  let effectChanges: [AbilityEffectChange]
-  let flavorTextEntries: [AbilityFlavorText]
-  let pokemon: [AbilityPokemon]
+  let id: Int?
+  let name: String?
+  let isMainSeries: Bool?
+  let generation: NamedAPIResource?                   // Generation
+  let names: [Name]?
+  let effectEntries: [VerboseEffect]?
+  let effectChanges: [AbilityEffectChange]?
+  let flavorTextEntries: [AbilityFlavorText]?
+  let pokemon: [AbilityPokemon]?
 }
 
 struct AbilityEffectChange: Codable {
-  let effectEntries: [Effect]
-  let versionGroup: NamedAPIResource        // VersionGroup
+  let effectEntries: [Effect]?
+  let versionGroup: NamedAPIResource?                 // VersionGroup
 }
 
 struct AbilityFlavorText: Codable {
-  let flavorText: String
-  let language: NamedAPIResource            // Language
-  let versionGroup: NamedAPIResource        // VersionGroup
+  let flavorText: String?
+  let language: NamedAPIResource?                     // Language
+  let versionGroup: NamedAPIResource?                 // VersionGroup
 }
 
 struct AbilityPokemon: Codable {
-  let isHidden: Bool
-  let slot: Int
-  let pokemon: NamedAPIResource             // Pokemon
+  let isHidden: Bool?
+  let slot: Int?
+  let pokemon: NamedAPIResource?                      // Pokemon
 }

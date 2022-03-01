@@ -8,7 +8,7 @@
 import Foundation
 
 struct Characteristic: Codable, Identifiable {
-  let id: Int
-  let geneModulo: Int
-  let possibleValues: [Int]
+  let id: Int?
+  let geneModulo: Int?
+  let possibleValues: [Int]?
 }

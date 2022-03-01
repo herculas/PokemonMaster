@@ -8,8 +8,8 @@
 import Foundation
 
 struct SuperContestEffect: Codable, Identifiable {
-  let id: Int
-  let appeal: Int
-  let flavorTextEntries: [FlavorText]
-  let moves: [NamedAPIResource]             // [Move]
+  let id: Int?
+  let appeal: Int?
+  let flavorTextEntries: [FlavorText]?
+  let moves: [NamedAPIResource]?                      // [Move]
 }

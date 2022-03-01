@@ -8,7 +8,7 @@
 import Foundation
 
 struct VersionGroupFlavorText: Codable {
-  let text: String
-  let language: NamedAPIResource            // Language
-  let versionGroup: NamedAPIResource        // VersionGroup
+  let text: String?
+  let language: NamedAPIResource?                     // Language
+  let versionGroup: NamedAPIResource?                 // VersionGroup
 }

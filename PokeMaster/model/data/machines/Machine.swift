@@ -8,8 +8,8 @@
 import Foundation
 
 struct Machine: Codable, Identifiable {
-  let id: Int
-  let item: NamedAPIResource                // Item
-  let move: NamedAPIResource                // Move
-  let versionGroup: NamedAPIResource        // VersionGroup
+  let id: Int?
+  let item: NamedAPIResource?                         // Item
+  let move: NamedAPIResource?                         // Move
+  let versionGroup: NamedAPIResource?                 // VersionGroup
 }

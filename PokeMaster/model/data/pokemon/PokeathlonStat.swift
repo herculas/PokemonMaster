@@ -8,18 +8,18 @@
 import Foundation
 
 struct PokeathlonStat: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let names: [Name]
-  let affectingNatures: NaturePokeathlonStatAffectSets
+  let id: Int?
+  let name: String?
+  let names: [Name]?
+  let affectingNatures: NaturePokeathlonStatAffectSets?
 }
 
 struct NaturePokeathlonStatAffectSets: Codable {
-  let increase: [NaturePokeathlonStatAffect]
-  let decrease: [NaturePokeathlonStatAffect]
+  let increase: [NaturePokeathlonStatAffect]?
+  let decrease: [NaturePokeathlonStatAffect]?
 }
 
 struct NaturePokeathlonStatAffect: Codable {
-  let maxChange: Int
-  let nature: NamedAPIResource              // Nature
+  let maxChange: Int?
+  let nature: NamedAPIResource?                       // Nature
 }

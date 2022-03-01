@@ -8,6 +8,6 @@
 import Foundation
 
 struct MachineVersionDetail: Codable {
-  let machine: APIResource                  // Machine
-  let versionGroup: NamedAPIResource        // VersionGroup
+  let machine: APIResource?                           // Machine
+  let versionGroup: NamedAPIResource?                 // VersionGroup
 }

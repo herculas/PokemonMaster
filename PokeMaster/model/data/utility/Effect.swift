@@ -8,6 +8,6 @@
 import Foundation
 
 struct Effect: Codable {
-  let effect: String
-  let language: NamedAPIResource            // Language
+  let effect: String?
+  let language: NamedAPIResource?                     // Language
 }

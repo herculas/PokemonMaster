@@ -8,13 +8,13 @@
 import Foundation
 
 struct Generation: Codable, Identifiable {
-  let id: Int
-  let name: String
-  let abilities: [NamedAPIResource]         // [Ability]
-  let names: [Name]
-  let mainRegion: NamedAPIResource          // Region
-  let moves: NamedAPIResource               // [Move]
-  let pokemonSpecies: [NamedAPIResource]    // [PokemonSpecies]
-  let types: [NamedAPIResource]             // [CoreType]
-  let versionGroups: [NamedAPIResource]     // [VersionGroup]
+  let id: Int?
+  let name: String?
+  let abilities: [NamedAPIResource]?                  // [Ability]
+  let names: [Name]?
+  let mainRegion: NamedAPIResource?                   // Region
+  let moves: NamedAPIResource?                        // [Move]
+  let pokemonSpecies: [NamedAPIResource]?             // [PokemonSpecies]
+  let types: [NamedAPIResource]?                      // [CoreType]
+  let versionGroups: [NamedAPIResource]?              // [VersionGroup]
 }

@@ -1,12 +1,12 @@
-////
-////  AbilityView.swift
-////  PokeMaster
-////
-////  Created by 宋睿 on 24/2/2022.
-////
 //
-//import SwiftUI
+//  AbilityView.swift
+//  PokeMaster
 //
+//  Created by 宋睿 on 24/2/2022.
+//
+
+import SwiftUI
+
 //struct AbilityViewModel: Codable, Identifiable {
 //  
 //  var id: Int { self.ability.id }

@@ -8,9 +8,9 @@
 import Foundation
 
 struct ContestEffect: Codable, Identifiable {
-  let id: Int
-  let appeal: Int
-  let jam: Int
-  let effectEntries: [Effect]
-  let flavorTextEntries: [FlavorText]
+  let id: Int?
+  let appeal: Int?
+  let jam: Int?
+  let effectEntries: [Effect]?
+  let flavorTextEntries: [FlavorText]?
 }
