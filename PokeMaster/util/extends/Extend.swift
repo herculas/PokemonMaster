@@ -19,10 +19,6 @@ extension Color {
   }
 }
 
-extension URL {
-  var extractedId: Int? { Int(self.lastPathComponent) }
-}
-
 extension String {
   var newlineRemoved: String { split(separator: "\n").joined(separator: " ") }
   var isEmailAddress: Bool {

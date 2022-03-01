@@ -66,4 +66,13 @@ class PokeDataModelTests: XCTestCase {
     print(evolutionChain)
     print(evolutionTrigger)
   }
+  
+  func testPaginationModels() throws {
+    let pagination: PagedObject = FileLoader.loadBundledJSON(file: "pokemon-pagination-1")
+    print(pagination.count!)
+    print(pagination.next ?? "last page")
+    print(pagination.previous ?? "first page")
+//    print(pagination.results ?? [])
+  }
+  
 }
