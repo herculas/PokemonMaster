@@ -52,9 +52,10 @@ struct PokemonSpecies: Codable, Identifiable {
 //  var text: String { self.genus }
 //}
 
-struct Genus: Codable {
+struct Genus: Codable, LanguageTextScheme {
   let genus: String?
   let language: NamedAPIResource?                     // Language
+  var text: String? { self.genus }
 }
 
 struct PokemonSpeciesDexEntry: Codable {

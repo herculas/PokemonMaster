@@ -44,10 +44,11 @@ struct ContestComboDetail: Codable {
   let useAfter: NamedAPIResource?                     // Move
 }
 
-struct MoveFlavorText: Codable {
+struct MoveFlavorText: Codable, LanguageTextScheme {
   let flavorText: String?
   let language: NamedAPIResource?                     // Language
   let versionGroup: NamedAPIResource?                 // VersionGroup
+  var text: String? { self.flavorText }
 }
 
 struct MoveMetaData: Codable {

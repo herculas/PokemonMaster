@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct VerboseEffect: Codable {
+struct VerboseEffect: Codable, LanguageTextScheme {
   let effect: String?
   let shortEffect: String?
   let language: NamedAPIResource?                     // Language
+  var text: String? { self.effect }
 }

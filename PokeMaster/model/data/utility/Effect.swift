@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Effect: Codable {
+struct Effect: Codable, LanguageTextScheme {
   let effect: String?
   let language: NamedAPIResource?                     // Language
+  var text: String? { self.effect }
 }

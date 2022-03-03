@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct FlavorText: Codable {
+struct FlavorText: Codable, LanguageTextScheme {
   let flavorText: String?
   let language: NamedAPIResource?                     // Language
   let version: NamedAPIResource?                      // Version
+  var text: String? { self.flavorText }
 }

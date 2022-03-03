@@ -24,10 +24,11 @@ struct AbilityEffectChange: Codable {
   let versionGroup: NamedAPIResource?                 // VersionGroup
 }
 
-struct AbilityFlavorText: Codable {
+struct AbilityFlavorText: Codable, LanguageTextScheme {
   let flavorText: String?
   let language: NamedAPIResource?                     // Language
   let versionGroup: NamedAPIResource?                 // VersionGroup
+  var text: String? { self.flavorText }
 }
 
 struct AbilityPokemon: Codable {

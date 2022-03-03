@@ -15,7 +15,8 @@ struct PokemonShape: Codable, Identifiable {
   let pokemonSpecies: [NamedAPIResource]?             // [PokemonSpecies]
 }
 
-struct AwesomeName: Codable {
+struct AwesomeName: Codable, LanguageTextScheme {
   let awesomeName: String?
   let language: NamedAPIResource?                     // Language
+  var text: String? { self.awesomeName }
 }

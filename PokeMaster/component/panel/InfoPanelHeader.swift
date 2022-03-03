@@ -1,82 +1,83 @@
-////
-////  PokemonInfoPanelHeader.swift
-////  pokemon
-////
-////  Created by 宋睿 on 2/2/2022.
-////
 //
-//import SwiftUI
+//  PokemonInfoPanelHeader.swift
+//  pokemon
 //
-//extension PokemonInfoPanel {
-//  
-//  struct Header: View {
-//    
-//    let model: PokemonViewModel
-//    
-//    var body: some View {
-//      HStack(spacing: 18) {
-//        pokemonIcon
-//        nameSpecies
-//        verticalDivider
-//        VStack(spacing: 12) {
-//          bodyStatus
+//  Created by 宋睿 on 2/2/2022.
+//
+
+import SwiftUI
+
+extension PokemonInfoPanel {
+  
+  struct Header: View {
+    
+    let pokemonViewModel: PokemonViewModel
+    let pokemonSpeciesViewModel: PokemonSpeciesViewModel
+    
+    var body: some View {
+      HStack(spacing: 18) {
+        pokemonIcon
+        nameSpecies
+        verticalDivider
+        VStack(spacing: 12) {
+          bodyStatus
 //          typeInfo
-//        }
-//      }
-//    }
-//    
-//    var pokemonIcon: some View {
-//      Image("Pokemon-\(model.id)")
-//        .resizable()
-//        .frame(width: 68, height: 68)
-//    }
-//    
-//    var nameSpecies: some View {
-//      VStack(spacing: 10) {
-//        VStack {
-//          Text(model.nameChinese)
-//            .font(.system(size: 22))
-//            .fontWeight(.bold)
+        }
+      }
+    }
+    
+    var pokemonIcon: some View {
+      Image("Pokemon-\(pokemonViewModel.pokemon.id!)")
+        .resizable()
+        .frame(width: 68, height: 68)
+    }
+    
+    var nameSpecies: some View {
+      VStack(spacing: 10) {
+        VStack {
+          Text(pokemonSpeciesViewModel.pokemonNames["zh-Hans"]!)
+            .font(.system(size: 22))
+            .fontWeight(.bold)
 //            .foregroundColor(model.color)
-//          Text(model.nameEnglish)
-//            .font(.system(size: 13))
-//            .fontWeight(.bold)
+          Text(pokemonSpeciesViewModel.pokemonNames["en"]!)
+            .font(.system(size: 13))
+            .fontWeight(.bold)
 //            .foregroundColor(model.color)
-//        }
-//        Text(model.genusChinese)
-//          .font(.system(size: 13))
-//          .fontWeight(.bold)
-//          .foregroundColor(.gray)
-//      }
-//    }
-//    
-//    var verticalDivider: some View {
-//      RoundedRectangle(cornerRadius: 1)
-//        .frame(width: 1, height: 44)
-//        .opacity(0.1)
-//    }
-//    
-//    var bodyStatus: some View {
-//      VStack(alignment: .leading) {
-//        HStack {
-//          Text("身高")
-//            .font(.system(size: 11))
-//            .foregroundColor(.gray)
-//          Text(model.height)
-//            .font(.system(size: 11))
+        }
+        Text(pokemonSpeciesViewModel.genusNames["zh-Hans"]!)
+          .font(.system(size: 13))
+          .fontWeight(.bold)
+          .foregroundColor(.gray)
+      }
+    }
+    
+    var verticalDivider: some View {
+      RoundedRectangle(cornerRadius: 1)
+        .frame(width: 1, height: 44)
+        .opacity(0.1)
+    }
+    
+    var bodyStatus: some View {
+      VStack(alignment: .leading) {
+        HStack {
+          Text("身高")
+            .font(.system(size: 11))
+            .foregroundColor(.gray)
+          Text(pokemonViewModel.height)
+            .font(.system(size: 11))
 //            .foregroundColor(model.color)
-//        }
-//        HStack {
-//          Text("体重")
-//            .font(.system(size: 11))
-//            .foregroundColor(.gray)
-//          Text(model.weight)
-//            .font(.system(size: 11))
+        }
+        HStack {
+          Text("体重")
+            .font(.system(size: 11))
+            .foregroundColor(.gray)
+          Text(pokemonViewModel.weight)
+            .font(.system(size: 11))
 //            .foregroundColor(model.color)
-//        }
-//      }
-//    }
-//    
+        }
+      }
+    }
+    
 //    var typeInfo: some View {
 //      HStack {
 //        ForEach(model.types) { type in
@@ -91,12 +92,15 @@
 //        }
 //      }
 //    }
-//  }
-//}
-//
-//struct PokemonInfoPanelHeader_Previews: PreviewProvider {
-//  static var previews: some View {
-//    PokemonInfoPanel.Header(model: .sample(id: 1))
-//      .previewLayout(.fixed(width: 428, height: 100))
-//  }
-//}
+  }
+}
+
+struct PokemonInfoPanelHeader_Previews: PreviewProvider {
+  static var previews: some View {
+    PokemonInfoPanel.Header(
+      pokemonViewModel: .sample(id: 25),
+      pokemonSpeciesViewModel: .sample(id: 25)
+    )
+      .previewLayout(.fixed(width: 428, height: 100))
+  }
+}

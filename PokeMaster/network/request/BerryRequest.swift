@@ -29,11 +29,11 @@ struct BerryRequest: HttpRequest {
 }
 
 extension BerryRequest {
-  public func fetchBerryList(paginationState: PaginationStateEnum = .initial(limit: 20)) -> AnyPublisher<PagedObject, Error> {
+  func fetchBerryList(paginationState: PaginationStateEnum = .initial(limit: 20)) -> AnyPublisher<PagedObject, Error> {
     self.callPaginated(endpoint: BerryRequest.API.fetchBerryList, paginationState: paginationState)
   }
   
-  public func fetchBerry(_ id: Int) -> AnyPublisher<Berry, Error> {
+  func fetchBerry(_ id: Int) -> AnyPublisher<Berry, Error> {
     self.call(endpoint: BerryRequest.API.fetchBerryById(id))
   }
 }

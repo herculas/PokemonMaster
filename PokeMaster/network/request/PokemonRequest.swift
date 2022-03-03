@@ -8,61 +8,33 @@
 import Foundation
 import Combine
 
-//struct PokemonRequest {
-//
-//  let id: Int
-//
-//  //  var publisher: AnyPublisher<PokemonViewModel, PokeError> {
-//  //    return PokemonRequest
-//  //      .pokemonPublisher(self.id)
-//  //      .flatMap { PokemonRequest.speciesPublisher($0) }
-//  //      .map { PokemonViewModel(pokemon: $0, species: $1) }
-//  //      .mapError { PokeError.networkFailed($0) }
-//  //      .receive(on: DispatchQueue.main)
-//  //      .eraseToAnyPublisher()
-//  //  }
-//
-//  //  static var allPublisher: AnyPublisher<[PokemonViewModel], PokeError> {
-//  //    return (1...30)
-//  //      .map { PokemonRequest(id: $0).publisher }
-//  //      .zipAll
-//  //  }
-//
-//  var publisher: AnyPublisher<PokemonViewModel, PokeError> {
-//    PokemonRequest.pokemonPublisher(self.id)
-//      .flatMap { ($0, PokemonRequest.speciesPublisher($0)) }
-//
-//    return AnyPublisher<PokemonViewModel, PokeError>()
-//  }
-//
-//  static private func pokemonPublisher(_ id: Int) -> AnyPublisher<Pokemon, PokeError> {
-//    return URLSession
-//      .shared
-//      .dataTaskPublisher(for: URL(string: "https://pokeapi.co/api/v2/pokemon/\(id)")!)
-//      .map { $0.data }
-//      .decode(type: Pokemon.self, decoder: appDecoder)
-//      .mapError { PokeError.networkFailed($0) }
-//      .eraseToAnyPublisher()
-//  }
-//
-//  static private func speciesPublisher(_ pokemon: Pokemon) -> AnyPublisher<PokemonSpecies, PokeError> {
-//    return URLSession
-//      .shared
-//      .dataTaskPublisher(for: pokemon.species.url!)
-//      .map { $0.data }
-//      .decode(type: PokemonSpecies.self, decoder: appDecoder)
-//      .mapError { PokeError.networkFailed($0) }
-//      .eraseToAnyPublisher()
-//  }
-//
-//  static private func colorPublisher(_ species: PokemonSpecies) -> AnyPublisher<PokemonColor, PokeError> {
-//    return URLSession
-//      .shared
-//      .dataTaskPublisher(for: species.color.url!)
-//      .map { $0.data }
-//      .decode(type: PokemonColor.self, decoder: appDecoder)
-//      .mapError { PokeError.networkFailed($0) }
-//      .eraseToAnyPublisher()
-//  }
-//
-//}
+struct PokemonRequest: HttpRequest {
+  
+  var session: URLSession
+  var baseUrl: String = "https://pokeapi.co/api/v2"
+  
+  enum API: APICall {
+    case fetchPokemonList
+    case fetchPokemonById(Int)
+    
+    var path: String {
+      switch self {
+      case .fetchPokemonList:
+        return "/pokemon"
+      case .fetchPokemonById(let id):
+        return "/pokemon/\(id)"
+      }
+    }
+  }
+  
+}
+
+extension PokemonRequest {
+  func fetchPokemonList(paginationState: PaginationStateEnum = .initial(limit: 20)) -> AnyPublisher<PagedObject, Error> {
+    self.callPaginated(endpoint: PokemonRequest.API.fetchPokemonList, paginationState: paginationState)
+  }
+  
+  func fetchPokemon(by id: Int) -> AnyPublisher<Pokemon, Error> {
+    self.call(endpoint: PokemonRequest.API.fetchPokemonById(id))
+  }
+}

@@ -16,49 +16,7 @@ struct Language: Codable, Identifiable {
   let names: [Name]?
 }
 
-protocol LanguageTextEntry {
-  var text: String { get }
-  var languageName: String { get }
+protocol LanguageTextScheme {
+  var text: String? { get }
+  var language: NamedAPIResource? { get }
 }
-
-//extension Array where Element: LanguageTextEntry {
-//  var japaneseHiraganaAndKatakana: String? {
-//    self.first { $0.languageName == "ja-Hrkt" }?.text
-//  }
-//  var japaneseRomanization: String? {
-//    self.first { $0.languageName == "roomaji" }?.text
-//  }
-//  var korean: String? {
-//    self.first { $0.languageName == "ko" }?.text
-//  }
-//  var traditionalChinese: String? {
-//    self.first { $0.languageName == "zh-Hant" }?.text
-//  }
-//  var french: String? {
-//    self.first { $0.languageName == "fr" }?.text
-//  }
-//  var german: String? {
-//    self.first { $0.languageName == "de" }?.text
-//  }
-//  var spanish: String? {
-//    self.first { $0.languageName == "es" }?.text
-//  }
-//  var italian: String? {
-//    self.first { $0.languageName == "it" }?.text
-//  }
-//  var english: String? {
-//    self.first { $0.languageName == "en" }?.text
-//  }
-//  var czech: String? {
-//    self.first { $0.languageName == "cs" }?.text
-//  }
-//  var japanese: String? {
-//    self.first { $0.languageName == "ja" }?.text
-//  }
-//  var simplifiedChinese: String? {
-//    self.first { $0.languageName == "zh-Hans" }?.text
-//  }
-//  var brazilianPortuguese: String? {
-//    self.first { $0.languageName == "pt-BR" }?.text
-//  }
-//}

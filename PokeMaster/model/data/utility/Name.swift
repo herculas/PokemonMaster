@@ -7,10 +7,8 @@
 
 import Foundation
 
-struct Name: Codable, LanguageTextEntry {
+struct Name: Codable, LanguageTextScheme {
   let name: String?
   let language: NamedAPIResource?                     // Language
-  
-  var text: String { self.name ?? "non-name" }
-  var languageName: String { self.language?.name ?? "na" }
+  var text: String? { self.name }
 }

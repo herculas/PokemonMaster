@@ -14,8 +14,9 @@ struct ContestType: Codable, Identifiable {
   let names: [ContestName]?
 }
 
-struct ContestName: Codable {
+struct ContestName: Codable, LanguageTextScheme {
   let name: String?
   let color: String?
   let language: NamedAPIResource?                     // Language
+  var text: String? { self.name }
 }

@@ -32,6 +32,20 @@ extension Ability {
   }
 }
 
+extension PokemonViewModel {
+  static func sample(id: Int) -> PokemonViewModel {
+    let pokemon = Pokemon.sample(id: id)
+    return PokemonViewModel(pokemon: pokemon)
+  }
+}
+
+extension PokemonSpeciesViewModel {
+  static func sample(id: Int) -> PokemonSpeciesViewModel {
+    let species = PokemonSpecies.sample(id: id)
+    return PokemonSpeciesViewModel(species: species)
+  }
+}
+
 //extension PokemonViewModel {
 //  static func sample(id: Int) -> PokemonViewModel {
 //    let pokemon = Pokemon.sample(id: id)

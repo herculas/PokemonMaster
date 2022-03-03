@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct VersionGroupFlavorText: Codable {
+struct VersionGroupFlavorText: Codable, LanguageTextScheme {
   let text: String?
   let language: NamedAPIResource?                     // Language
   let versionGroup: NamedAPIResource?                 // VersionGroup
