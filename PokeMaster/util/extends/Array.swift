@@ -45,7 +45,11 @@ extension Array where Element: LanguageTextScheme {
     self.forEach { element in
       if let key = element.language?.name {
         if let value = element.text, !map.keys.contains(value) {
-          map.updateValue(value, forKey: key)
+          if key == "zh-Hans" || key == "zh-Hant" {
+            map.updateValue(value.carriageReturnRemoved, forKey: key)
+          } else {
+            map.updateValue(value.carriageReturnRemovedWithSpace, forKey: key)
+          }
         }
       }
     }

@@ -14,6 +14,15 @@ struct AbilityViewModel {
   }
 }
 
-extension AbilityViewModel {
-  
+extension AbilityViewModel: Identifiable {
+  var id: Int? { self.ability.id }
 }
+
+extension AbilityViewModel {
+  var names: [String: String]? { self.ability.names?.languageTextMap }
+  var descriptions: [String: String]? { self.ability.flavorTextEntries?.languageTextMap }
+}
+
+//extension CoreTypeViewModel {
+//  var names: [String: String]? { self.coreType.names?.languageTextMap }
+//}

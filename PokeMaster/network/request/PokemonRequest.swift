@@ -16,13 +16,13 @@ struct PokemonRequest: HttpRequest {
   enum API: APICall {
     case fetchPokemonList
     case fetchPokemonById(Int)
+    case fetchPokemonSpeciesById(Int)
     
     var path: String {
       switch self {
-      case .fetchPokemonList:
-        return "/pokemon"
-      case .fetchPokemonById(let id):
-        return "/pokemon/\(id)"
+      case .fetchPokemonList: return "/pokemon"
+      case .fetchPokemonById(let id): return "/pokemon/\(id)"
+      case .fetchPokemonSpeciesById(let id): return "/pokemon-species/\(id)"
       }
     }
   }
@@ -36,5 +36,9 @@ extension PokemonRequest {
   
   func fetchPokemon(by id: Int) -> AnyPublisher<Pokemon, Error> {
     self.call(endpoint: PokemonRequest.API.fetchPokemonById(id))
+  }
+  
+  func fetchPokemonSpecies(by id: Int) -> AnyPublisher<PokemonSpecies, Error> {
+    self.call(endpoint: PokemonRequest.API.fetchPokemonSpeciesById(id))
   }
 }

@@ -14,6 +14,14 @@ struct CoreTypeViewModel {
   }
 }
 
+extension CoreTypeViewModel: Identifiable {
+  var id: Int? { self.coreType.id }
+}
+
+extension CoreTypeViewModel {
+  var names: [String: String]? { self.coreType.names?.languageTextMap }
+}
+
 extension CoreTypeViewModel {
   var color: Color {
     switch self.coreType.id {
